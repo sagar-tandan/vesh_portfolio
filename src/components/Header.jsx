@@ -27,8 +27,8 @@ export default function Header({user}) {
       <div className="flex justify-between 2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md items-center mx-auto">
         <Link to="/">
           <h1 className=" p-3 font-bold text-md md:text-xl flex flex-wrap">
-            <span className="font-SagarFont2 text-slate-500">Veshraj</span>
-            <span className="font-SagarFont2 text-slate-700">Pangeni</span>
+            <span className="font-SagarFont text-slate-500 font-bold">Veshraj</span>
+            <span className="font-SagarFont text-slate-700 font-bold">Pangeni</span>
           </h1>
         </Link>
         <ul className="md:flex gap-8 m-3">
