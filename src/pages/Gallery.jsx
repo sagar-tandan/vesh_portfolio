@@ -36,6 +36,7 @@ export default function Gallery() {
   const [keys, setKeys] = useState([]);
   const [imageUrls, setImageUrls] = useState({});
   const [loading, setLoading] = useState(true);
+  const [folderLengths, setFolderLengths] = useState({});
 
   useEffect(() => {
     const fetchGalleryKeys = async () => {
@@ -57,6 +58,8 @@ export default function Gallery() {
           setKeys(mappedKeys);
 
           const imageUrlsForKeys = {};
+          const folderLengthsObj = {};
+
           mappedKeys.forEach((key) => {
             const data = records.find((record) => record.key === key)?.data;
             if (data) {
@@ -65,12 +68,14 @@ export default function Gallery() {
                 .map((imageData) => imageData.image);
               if (imageUrls.length > 0) {
                 imageUrlsForKeys[key] = imageUrls;
+                folderLengthsObj[key] = imageUrls.length;
               }
             }
           });
 
           // Set image URLs state
           setImageUrls(imageUrlsForKeys);
+          setFolderLengths(folderLengthsObj);
           setLoading(false);
         });
       } catch (error) {
@@ -84,9 +89,6 @@ export default function Gallery() {
 
     fetchGalleryKeys();
   }, []);
-
-
-
 
   return (
     <div className="container flex flex-col mx-auto gap-2 mt-10">
@@ -116,13 +118,16 @@ export default function Gallery() {
         >
           {keys.map((key) => (
             <div key={key} className="p-5 ">
-
-              <Link to={`/gallery/${key}`} state={{ imageUrls: imageUrls[key] }}>
+              <Link
+                to={`/gallery/${key}`}
+                state={{ imageUrls: imageUrls[key] }}
+              >
                 <GalleeryCard
                   folderName={key}
                   firstImage={imageUrls[key] && imageUrls[key][0]}
+                  count={folderLengths[key]}
                   className="w-full"
-                  />
+                />
               </Link>
             </div>
           ))}
@@ -130,6 +135,4 @@ export default function Gallery() {
       )}
     </div>
   );
-
- 
 }
