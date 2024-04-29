@@ -36,11 +36,11 @@ export default function ({ PostID, title, author, description, pdf,image,date,cl
               alt="profile image"
               className="w-10 h-10 rounded-full p-1"
             />
-            <h3 className="font-semibold font-SagarFont text-md">
+            <h3 className="font-semibold font-SagarFont text-sm">
               {author}
             </h3>
           </div>
-          <span className="font-SagarFont font-semibold text-md">
+          <span className="font-SagarFont font-semibold text-sm">
             {parts[2]} {parts[1]}
           </span>
         </div>
