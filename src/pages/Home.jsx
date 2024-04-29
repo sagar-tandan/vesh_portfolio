@@ -57,11 +57,11 @@ export default function Home() {
           </p>
 
 
-            <div className="w-1/2 md:mx-0 md:justify-start flex items-center justify-center mx-auto">
+            <div className="w-1/2 md:w-full md:mx-0 md:justify-start flex items-center justify-center mx-auto">
             <a href={cv} target="_blank" rel="noreferrer ">
 
-            <button className="bg-slate-600 rounded-md w-full py-4 px-12 md:px-40 text-white  active:bg-slate-800 hover:bg-slate-700 transition-all duration-300 ease-in-out ">
-              Download CV
+            <button className="bg-slate-600 rounded-md w-full md:w-[70%] py-4 px-12 text-white  active:bg-slate-800 hover:bg-slate-700 transition-all duration-300 ease-in-out ">
+              View CV
             </button>
             </a>
             </div>
