@@ -21,7 +21,7 @@ import { auth } from "./firebase-config.jsx";
 import DisplayProjects from "./pages/Admin/DisplayProjects.jsx";
 import DisplayPosts from "./pages/Admin/DisplayPosts.jsx";
 import UploadCv from "./pages/Admin/UploadCv.jsx";
-
+import AboutDeveloper from "./pages/AboutDeveloper.jsx";
 function App() {
   const [user, setuser] = useState([]);
 
@@ -41,12 +41,19 @@ function App() {
     auth.signOut(); // Sign out the user
   }
 
+  
+const ExternalRedirect = ({ to }) => {
+  window.location.href = to;
+  return null;
+};
+
+
   return (
     <BrowserRouter>
       <Header user={user} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/aboutdeveloper" element={<Navigate to="https://www.facebook.com/sagartandan333" />} />
+        <Route path="/aboutdeveloper" element={<AboutDeveloper />} />
         <Route path="/admin/replaceCv"element={user ? ( <UploadCv /> ) : (<>  <Navigate to="/login" /></> )} />
         <Route path="/posts/" element={<ProjectMain />} />
         <Route path="/posts/:id" element={<BlogDetail />} />
