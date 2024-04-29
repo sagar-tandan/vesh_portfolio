@@ -71,9 +71,9 @@ export default function Blog() {
           />
         </section>
       ) : (
-        <div className="bg-slate-300 container w-[85%] sm:w-[90%] md:w-[100%] mx-auto flex flex-col md:flex-row">
+        <div className="bg-slate-300 container w-[95%] md:w-[100%] mx-auto flex flex-col md:flex-row">
           {posts.map((post) => (
-            <div className="p-5" key={post.id}>
+            <div className="px-4 py-1" key={post.id}>
               <Link
                 to={`/posts/${post.ref}`}
                 state={{ title:post.title,

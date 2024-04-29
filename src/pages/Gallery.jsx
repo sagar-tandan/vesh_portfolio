@@ -114,11 +114,11 @@ export default function Gallery() {
         </section>
       ) : (
         <Slider
-          className="bg-slate-300 container w-[95%] md:w-[100%] mx-auto mt-5"
+          className="bg-slate-300 container w-[95%] md:w-[100%] mx-auto"
           {...settings}
         >
           {keys.map((key) => (
-            <div key={key} className="p-5 ">
+            <div key={key} className="px-3 pt-1">
               <Link
                 to={`/gallery/${key}`}
                 state={{ imageUrls: imageUrls[key] }}

@@ -56,11 +56,18 @@ export default function Home() {
             richness to my life.
           </p>
 
-          <a href={cv} target="_blank" rel="noreferrer ">
-            <button className="bg-slate-600 rounded-md w-1/2 p-4 mt-2 text-white active:bg-slate-800 hover:bg-slate-700 transition-all duration-300 ease-in-out mx-auto md:mx-0">
+
+            <div className="w-1/2 md:mx-0 md:justify-start flex items-center justify-center mx-auto">
+            <a href={cv} target="_blank" rel="noreferrer ">
+
+            <button className="bg-slate-600 rounded-md w-full py-4 px-12 md:px-40 text-white  active:bg-slate-800 hover:bg-slate-700 transition-all duration-300 ease-in-out ">
               Download CV
             </button>
-          </a>
+            </a>
+            </div>
+            
+
+
         </div>
 
         <img
