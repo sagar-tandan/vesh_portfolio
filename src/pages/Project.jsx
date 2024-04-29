@@ -82,7 +82,7 @@ export default function Project() {
         </section>
       ) : (
         <Slider
-          className="bg-slate-300 container w-[95%] md:w-[100%] mx-auto"
+          className="bg-slate-300 container w-[95%] md:w-[100%] mx-auto mr-4"
           {...settings}
         >
           {project.map((post) => (

@@ -122,13 +122,13 @@ export default function () {
   };
 
   return (
-    <div className="container mx-auto flex flex-col gap-2 my-10 ">
-      <h1 className="font-bold font-SagarFont px-3 text-lg 2xl:text-2xl">
+    <div className="container mx-auto flex flex-col gap-2 my-8">
+      <h1 className="font-bold font-SagarFont px-3 text-lg 2xl:text-2xl ">
         Contact
       </h1>
 
       <div className=" container flex flex-col mx-auto gap-2 md:flex-row mt-4">
-        <form onSubmit={handleSubmit} action="" className="mx-3 md:w-1/2">
+        <form onSubmit={handleSubmit} action="" className="mx-5 md:w-1/2">
           <div className="mb-3 pt-0">
             <input
               type="text"
