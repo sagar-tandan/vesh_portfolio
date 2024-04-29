@@ -5,6 +5,7 @@ import { getStorage } from "firebase/storage";
 import { getAuth } from "firebase/auth";
 // import dotenv from 'dotenv';
 // dotenv.config();
+require('dotenv').config();
 
 
 const firebaseConfig = {
