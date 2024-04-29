@@ -47,7 +47,7 @@ export default function Blog() {
   }, []);
 
   return (
-    <div className="container flex flex-col mx-auto gap-2 mt-10">
+    <div className="container flex flex-col mx-auto gap-2 mt-20">
       <div className="flex flex-row justify-between">
         <div className="flex flex-col">
           <h1 className="font-bold font-SagarFont px-3 text-xl 2xl:text-2xl">
@@ -55,7 +55,7 @@ export default function Blog() {
           </h1>
         </div>
         <Link to="/posts">
-          <div className="font-SagarFont px-2 mx-3 my-2 text-sm md:text-lg 2xl:text-lg border rounded-3xl border-slate-600 flex items-center hover:bg-slate-600 hover:text-white hover:cursor-pointer active:bg-slate-800 ease-linear transition-all duration-150 ">
+          <div className="font-SagarFont px-2 mx-7 my-2 text-sm md:text-lg 2xl:text-lg border rounded-3xl border-slate-600 flex items-center hover:bg-slate-600 hover:text-white hover:cursor-pointer active:bg-slate-800 ease-linear transition-all duration-150 ">
             <span>See More</span> <span className="pt-[1px] ml-1">&gt;</span>
           </div>
         </Link>

@@ -92,7 +92,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <div className="container flex flex-col mx-auto gap-2 mt-10">
+    <div className="container flex flex-col mx-auto gap-2 mt-20">
       <div className="flex flex-row justify-between">
         <div className="flex flex-col">
           <h1 className="font-bold font-SagarFont px-3 text-xl 2xl:text-2xl">

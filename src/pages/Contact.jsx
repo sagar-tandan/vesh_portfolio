@@ -122,7 +122,7 @@ export default function () {
   };
 
   return (
-    <div className="container mx-auto flex flex-col gap-2 my-8">
+    <div className="container mx-auto flex flex-col gap-2 my-8 mt-12">
       <h1 className="font-bold font-SagarFont px-3 text-lg 2xl:text-2xl ">
         Contact
       </h1>
@@ -165,7 +165,7 @@ export default function () {
 
           <button
             type="submit"
-            className="mb-2 w-1/2 mx-auto bg-slate-500 text-white active:bg-slate-700 font-SagarFont uppercase font-semibold rounded shadow-md hover:bg-slate-600 outline-none focus:outline-none p-3 ease-linear transition-all duration-150 "
+            className="mb-2 w-[70%] md:w-1/2 mx-auto bg-slate-500 text-white active:bg-slate-700 font-SagarFont uppercase text-sm rounded shadow-md hover:bg-slate-600 outline-none focus:outline-none p-3 ease-linear transition-all duration-150 "
           >
             Send a Message
           </button>
