@@ -113,7 +113,7 @@ export default function Gallery() {
         </section>
       ) : (
         <Slider
-          className="bg-slate-300 container w-[85%] sm:w-[90%] md:w-[100%] mx-auto mt-5"
+          className="bg-slate-300 container w-[90%] md:w-[100%] mx-auto mt-5"
           {...settings}
         >
           {keys.map((key) => (

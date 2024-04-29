@@ -83,7 +83,7 @@ export default function Project() {
         </section>
       ) : (
 
-        <Slider className="bg-slate-300 container w-[85%] sm:w-[90%] md:w-[100%] mx-auto mt-5" {...settings}>
+        <Slider className="bg-slate-300 container w-[90%] md:w-[100%] mx-auto mt-5" {...settings}>
         {project.map((post) => (
           <div className="p-5" key={post.id}>
             <ProjectCard

@@ -14,7 +14,7 @@ export default function ({ PostID, title, author, description, pdf,image,date,cl
 
 
   return (
-    <div className={`group m-1 flex flex-col rounded-2xl overflow-hidden hover:scale-105 hover:bg-[#0000005c] active:bg-slate-500 active:scale-100 ease-linear transition-all duration-150  ${className}`}>
+    <div className={`group m-1 flex flex-col rounded-md overflow-hidden hover:scale-[103%] hover:bg-[#0000005c] active:bg-slate-500 active:scale-100 ease-linear transition-all duration-150 shadow-md ${className}`}>
     
       <a href={`${pdf}.pdf`} target="_blank" rel="noreferrer " >
 
