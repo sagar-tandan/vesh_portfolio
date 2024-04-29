@@ -176,8 +176,7 @@ export default function Header({ user }) {
                 setActiveMenuItem("admin");
                 closeMobileMenu();
               }}
-            >
-              Admin Login
+            >Admin Login
             </li>
           </Link>
         </ul>
