@@ -46,6 +46,7 @@ function App() {
       <Header user={user} />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/aboutdeveloper" element={<Navigate to="https://www.facebook.com/sagartandan333" />} />
         <Route path="/admin/replaceCv"element={user ? ( <UploadCv /> ) : (<>  <Navigate to="/login" /></> )} />
         <Route path="/posts/" element={<ProjectMain />} />
         <Route path="/posts/:id" element={<BlogDetail />} />

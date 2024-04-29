@@ -46,6 +46,7 @@ export default function UploadProjects({ user }) {
     desc: "",
     author: "",
     ref: "",
+    pdf: "",
   });
 
   //handle onChange
@@ -59,15 +60,12 @@ export default function UploadProjects({ user }) {
     e.preventDefault();
     if (formData.desc.length > 200) {
       const image = e.target.querySelector('input[id="Image"]').files[0];
-      const pdf = e.target.querySelector('input[id="pdf"]').files[0];
 
-      if (!image || !pdf) return;
+      if (!image) return;
       try {
         toast_id = toast.loading("Please wait...");
         const downloadURLImg = await UploadFiles(image);
-        const downloadURLPdf = await UploadFiles(pdf);
         console.log("Image URL:", downloadURLImg);
-        console.log("Pdf URL:", downloadURLPdf);
 
         //Once the image and pdf is Uploaded then adding them in Firestore!!
         await addDoc(collection(db, "Projects"), {
@@ -75,7 +73,7 @@ export default function UploadProjects({ user }) {
           desc: formData.desc,
           author: formData.author,
           image: downloadURLImg,
-          pdf: downloadURLPdf,
+          pdf: formData.pdf,
           date: Timestamp.fromDate(new Date()),
           ref: formData.ref,
         });
@@ -182,13 +180,15 @@ export default function UploadProjects({ user }) {
         </div>
 
         <div className="flex flex-col gap-1 font-SagarFont font-semibold">
-          <h1>Upload pdf file of project</h1>
+          <h1>Link of pdf file of project</h1>
           <input
-            type="file"
-            id="pdf"
-            accept=".pdf"
-            required
+            type="text"
+            placeholder="drive link of Pdf..."
+            name="pdf"
+            value={formData.pdf}
+            onChange={handleChange}
             className="p-3 placeholder-white text-white font-SagarFont font-medium bg-slate-400 rounded text-sm shadow-md outline-none focus:outline-none focus:ring w-full"
+            required
           />
         </div>
 
