@@ -5,8 +5,8 @@ import Contact from "./Contact.jsx";
 import Gallery from "./Gallery.jsx";
 import Academic from "./Academic.jsx";
 import Blog from "./Blog.jsx";
-import veshrajcv from "../assets/veshraj_cv.pdf";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 import { db } from "../firebase-config.jsx";
 import { getDoc, collection, query, doc } from "firebase/firestore";

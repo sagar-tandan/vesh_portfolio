@@ -3,25 +3,21 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import { getAuth } from "firebase/auth";
-// import dotenv from 'dotenv';
-// dotenv.config();
 
+//if anyone is looking through this and thinking that such 
+//sensitive info. are not hidden ..I tried using .env but firebase didnt allowed that
+//if you know any methods you can mail me at sagarchhetry333@gmail.com
+// but i had set write permission to specifit admid only so even if the api keys are known
+//stealer won't be able to use it...
 const firebaseConfig = {
-   apiKey: import.meta.env.VITE_API_KEY,
-  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_APP_ID,
-  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
+  apiKey: "AIzaSyD7KDAJ8EPpc3AF2t7uCiWav1-wLUNXvuc",
+  authDomain: "blog-d0133.firebaseapp.com",
+  projectId: "blog-d0133",
+  storageBucket: "blog-d0133.appspot.com",
+  messagingSenderId: " 106819996990",
+  appId: "1:106819996990:web:b8edc4a84dffef5971706f",
+  measurementId: " G-QEPNC211TN",
 
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  // authDomain: process.env.VITE_AUTH_DOMAIN,
-  // projectId: process.env.VITE_PROJECT_ID,
-  // storageBucket: process.VITE_STORAGE_BUCKET,
-  // messagingSenderId: process.env.VITE_MESSAGING_SENDER_ID,
-  // appId: process.env.VITE_APP_ID,
-  // measurementId: process.env.VITE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
