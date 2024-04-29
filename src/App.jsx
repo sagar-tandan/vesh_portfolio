@@ -20,6 +20,7 @@ import { useState, useEffect } from "react";
 import { auth } from "./firebase-config.jsx";
 import DisplayProjects from "./pages/Admin/DisplayProjects.jsx";
 import DisplayPosts from "./pages/Admin/DisplayPosts.jsx";
+import UploadCv from "./pages/Admin/UploadCv.jsx";
 
 function App() {
   const [user, setuser] = useState([]);
@@ -45,6 +46,7 @@ function App() {
       <Header user={user} />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/admin/replaceCv"element={user ? ( <UploadCv /> ) : (<>  <Navigate to="/login" /></> )} />
         <Route path="/posts/" element={<ProjectMain />} />
         <Route path="/posts/:id" element={<BlogDetail />} />
         <Route path="gallery/:folderName" element={<GalleryDetail />} />

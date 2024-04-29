@@ -1,12 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import veshraj from "../../src/assets/Images/veshraj.jpg";
 import Project from "./Project.jsx";
 import Contact from "./Contact.jsx";
 import Gallery from "./Gallery.jsx";
 import Academic from "./Academic.jsx";
 import Blog from "./Blog.jsx";
+import veshrajcv from "../assets/veshraj_cv.pdf";
+import { Link } from "react-router-dom";
+
+import { db } from "../firebase-config.jsx";
+import { getDoc, collection, query, doc } from "firebase/firestore";
 
 export default function Home() {
+  const [cv, setCV] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchCv = async () => {
+      try {
+        const CvSnapshot = await getDoc(query(doc(db, "CV", "veshraj")));
+        const cvContent = CvSnapshot.data();
+        setCV(cvContent.cv);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+        toast.error("Error fetching Projects!!", {
+          position: "bottom-center",
+          autoClose: 4000,
+        });
+        setLoading(false);
+      }
+    };
+    fetchCv();
+  }, []);
+
   return (
     <div>
       <div className="container flex flex-col-reverse mx-auto mt-10 p-2 gap-5 items-center justify-center md:flex-row">
@@ -27,12 +54,13 @@ export default function Home() {
             fitness.In my free time, I love watching games, particularly
             football and cricket. These interests keep me balanced and add
             richness to my life.
-
           </p>
 
-          <button className="bg-slate-600 rounded-md w-1/2 p-4 mt-2 text-white active:bg-slate-800 hover:bg-slate-700 transition-all duration-300 ease-in-out mx-auto md:mx-0">
-            Download CV
-          </button>
+          <a href={cv} target="_blank" rel="noreferrer ">
+            <button className="bg-slate-600 rounded-md w-1/2 p-4 mt-2 text-white active:bg-slate-800 hover:bg-slate-700 transition-all duration-300 ease-in-out mx-auto md:mx-0">
+              Download CV
+            </button>
+          </a>
         </div>
 
         <img
