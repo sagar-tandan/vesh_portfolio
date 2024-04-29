@@ -22,6 +22,7 @@ export default function Gallery() {
     autoplaySpeed: 4000,
     slidesToShow: 2,
     slidesToScroll: 1,
+    arrows: false,
 
     responsive: [
       {
@@ -113,7 +114,7 @@ export default function Gallery() {
         </section>
       ) : (
         <Slider
-          className="bg-slate-300 container w-[90%] md:w-[100%] mx-auto mt-5"
+          className="bg-slate-300 container w-[95%] md:w-[100%] mx-auto mt-5"
           {...settings}
         >
           {keys.map((key) => (
