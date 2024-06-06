@@ -93,15 +93,13 @@ export default function Gallery() {
 
   return (
     <div className="container flex flex-col mx-auto gap-2 mt-20">
-      <div className="flex flex-row justify-between">
-        <div className="flex flex-col">
-          <h1 className="font-bold font-SagarFont px-3 text-xl 2xl:text-2xl">
-            Gallery
-          </h1>
-          <p className="font-SagarFont px-3 text-sm md:text-lg">
-            Here are some memories I had created over the years :
-          </p>
-        </div>
+      <div className="flex flex-col">
+        <h1 className="font-bold font-SagarFont px-3 text-xl 2xl:text-2xl mx-auto md:mx-0">
+          Gallery
+        </h1>
+        <p className="font-SagarFont px-3 text-sm md:text-lg mx-auto md:mx-0">
+          Here are some memories I had created over the years :
+        </p>
       </div>
       {loading ? (
         <section className="container mx-auto flex flex-wrap items-center justify-center gap-5 mt-5">

@@ -21,7 +21,7 @@ export default function BlogCard({
 
   return (
     <div
-      className={`group m-1 flex flex-col rounded overflow-hidden hover:scale-[102%] hover:bg-[#0000005c] active:brightness-50 active:scale-100 ease-linear transition-all duration-150 shadow-md  ${className}`}
+      className={`group m-1 h-[340px] md:h-[360px] lg:h-[380px] flex flex-col rounded overflow-hidden hover:scale-[102%] hover:bg-[#0000005c] active:brightness-50 active:scale-100 ease-linear transition-all duration-150 shadow-md  ${className}`}
     >
       <img
         src={mainImage}

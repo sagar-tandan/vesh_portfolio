@@ -14,11 +14,11 @@ export default function ({ PostID, title, author, description, pdf,image,date,cl
 
 
   return (
-    <div className={`group m-1 flex flex-col rounded-md overflow-hidden hover:scale-[103%] hover:bg-[#0000005c] active:bg-slate-500 active:scale-100 ease-linear transition-all duration-150 shadow-md ${className}`}>
+    <div className={`group m-1 flex flex-col rounded-md overflow-hidden hover:bg-[#0000005c] active:bg-slate-500 active:scale-100 ease-linear transition-all duration-150 shadow-md ${className}`}>
     
       <a href={`${pdf}.pdf`} target="_blank" rel="noreferrer " >
 
-        <img src={image} alt="Project 1" className="w-full h-[180px] md:h-[210px] lg:h-[240px] xl:h-[270px] active:brightness-50 group-hover:brightness-50 ease-linear transition-all duration-150" />
+        <img src={image} alt="Project 1" className="w-full h-[180px] md:h-[210px] lg:h-[240px] xl:h-[270px] active:brightness-20 group-hover:scale-[102%] group-hover:brightness-50 ease-linear transition-all duration-300" />
 
         <div className="flex flex-col gap-1 p-3">
           <h2 className="font-semibold font-SagarFont xl:text-lg ">
@@ -36,8 +36,8 @@ export default function ({ PostID, title, author, description, pdf,image,date,cl
               alt="profile image"
               className="w-10 h-10 rounded-full p-1"
             />
-            <h3 className="font-semibold font-SagarFont text-sm">
-              {author}
+            <h3 className="font-medium font-SagarFont text-sm">
+              Veshraj Pangeni
             </h3>
           </div>
           <span className="font-SagarFont font-semibold text-sm">

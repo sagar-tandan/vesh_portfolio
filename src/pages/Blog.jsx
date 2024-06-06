@@ -26,8 +26,6 @@ export default function Blog() {
             orderBy("ref", "desc"),
             limit(limitNumber)
           )
-          
-    
         );
         const PostsData = PostsSnapshot.docs.map((doc) => ({
           id: doc.id,
@@ -49,13 +47,13 @@ export default function Blog() {
   return (
     <div className="container flex flex-col mx-auto gap-2 mt-20">
       <div className="flex flex-row justify-between">
-        <div className="flex flex-col">
-          <h1 className="font-bold font-SagarFont px-3 text-xl 2xl:text-2xl">
+        <div className="flex flex-col mx-auto md:mx-0">
+          <h1 className="font-bold font-SagarFont px-3 text-xl 2xl:text-2xl mx-auto">
             Recent Posts
           </h1>
         </div>
         <Link to="/posts">
-          <div className="font-SagarFont px-2 mx-7 my-2 text-sm md:text-lg 2xl:text-lg border rounded-3xl border-slate-600 flex items-center hover:bg-slate-600 hover:text-white hover:cursor-pointer active:bg-slate-800 ease-linear transition-all duration-150 ">
+          <div className="hidden font-SagarFont px-2 mx-7 my-2 text-sm md:text-lg 2xl:text-lg border rounded-3xl border-slate-600 md:flex items-center hover:bg-slate-600 hover:text-white hover:cursor-pointer active:bg-slate-800 ease-linear transition-all duration-150 ">
             <span>See More</span> <span className="pt-[1px] ml-1">&gt;</span>
           </div>
         </Link>
@@ -76,14 +74,16 @@ export default function Blog() {
             <div className="px-4 py-1" key={post.id}>
               <Link
                 to={`/posts/${post.ref}`}
-                state={{ title:post.title,
+                state={{
+                  title: post.title,
                   intro: post.intro,
                   content: post.content,
                   conclusion: post.conclusion,
                   mainImage: post.mainImage,
-                  ref:post.ref,
-                  id:post.id,
-                  date: post.date.toDate().toString() }}
+                  ref: post.ref,
+                  id: post.id,
+                  date: post.date.toDate().toString(),
+                }}
               >
                 <BlogCard
                   title={post.title}
@@ -99,6 +99,12 @@ export default function Blog() {
           ))}
         </div>
       )}
+
+      <Link className="w-1/3 mx-auto" to="/posts">
+        <div className="md:hidden justify-center font-SagarFont px-2 py-2 my-2 text-sm md:text-lg 2xl:text-lg border rounded-3xl border-slate-600 flex items-center hover:bg-slate-600 hover:text-white hover:cursor-pointer active:bg-slate-800 ease-linear transition-all duration-150 w-full">
+          <span>See More</span> <span className="pt-[1px] ml-1">&gt;</span>
+        </div>
+      </Link>
     </div>
   );
 }

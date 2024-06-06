@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="container flex flex-col-reverse mx-auto mt-10 p-2 gap-5 items-center justify-center md:flex-row">
+      <div className="relative container flex flex-col-reverse mx-auto mt-10 p-2 gap-5 items-center justify-center md:flex-row">
         <div className="flex flex-col gap-5 w-full md:w-3/5 lg:w-4/5 p-3">
           <h2 className="font-bold text-xl font-SagarFont">
             Hello! I am Veshraj Pangeni, Civil Engineer from Nepal.
@@ -57,10 +57,10 @@ export default function Home() {
           </p>
 
 
-            <div className="w-1/2 md:w-full md:mx-0 md:justify-start flex items-center justify-center mx-auto">
+            <div className="absolute bottom-[-50px] left-0 right-0 w-1/2 mx-auto md:mx-4 md:w-1/3">
             <a href={cv} target="_blank" rel="noreferrer ">
 
-            <button className="bg-slate-600 rounded-md w-full py-4 px-12 md:px-10 text-white  active:bg-slate-800 hover:bg-slate-700 transition-all duration-300 ease-in-out ">
+            <button className="bg-slate-600 flex justify-center rounded-md w-full py-4 px-12 md:px-10 text-white  active:bg-slate-800 hover:bg-slate-700 transition-all duration-300 ease-in-out ">
               View CV
             </button>
             </a>
@@ -77,7 +77,7 @@ export default function Home() {
         />
       </div>
 
-      <div id="education">
+      <div id="education" className="mt-[100px]">
         <Academic />
       </div>
 

@@ -10,8 +10,7 @@ import fb from "../assets/Images/fb.png";
 import twitter from "../assets/Images/twitter.png";
 import linkeedin from "../assets/Images/linkeedin.png";
 import youtube from "../assets/Images/youtube.png";
-import { addDoc, collection } from "firebase/firestore";
-import { db } from "../firebase-config";
+
 
 import emailjs from "@emailjs/browser";
 
@@ -39,12 +38,7 @@ export default function () {
 
       // console.log(formData);
       if (emailRegex.test(formData.email)) {
-        // Add a new document with a generated id.
-        // await addDoc(collection(db, "Contacts"), {
-        //   name: formData.name,
-        //   email: formData.email,
-        //   message: formData.message,
-        // });
+
         let toast_id = toast.loading("Please wait...", {
           position: "bottom-center",
         });
@@ -123,7 +117,7 @@ export default function () {
 
   return (
     <div className="container mx-auto flex flex-col gap-2 my-8 mt-12">
-      <h1 className="font-bold font-SagarFont px-3 text-lg 2xl:text-2xl ">
+      <h1 className="font-bold font-SagarFont px-3 text-lg 2xl:text-2xl mx-auto md:mx-0 ">
         Contact
       </h1>
 

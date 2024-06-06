@@ -63,10 +63,10 @@ export default function Project() {
   return (
     <div className="container flex flex-col mx-auto gap-2 mt-10">
       <div className="flex flex-col">
-        <h1 className="font-bold font-SagarFont px-3 text-xl 2xl:text-2xl">
+        <h1 className="font-bold font-SagarFont px-3 text-xl 2xl:text-2xl mx-auto md:mx-0">
           Projects
         </h1>
-        <p className="font-SagarFont px-3 text-sm md:text-lg">
+        <p className="font-SagarFont px-3 text-sm md:text-lg mx-auto md:mx-0">
           Here are some projects i have worked on :
         </p>
       </div>
@@ -82,7 +82,7 @@ export default function Project() {
         </section>
       ) : (
         <Slider
-          className="bg-slate-300 container w-[95%] md:w-[100%] mx-auto mr-4"
+          className="bg-slate-300 container w-[95%] md:w-[100%] mx-auto mr-4 py-2"
           {...settings}
         >
           {project.map((post) => (
