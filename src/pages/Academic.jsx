@@ -29,9 +29,14 @@ export default function () {
 
             <div className="flex flex-row gap-2 my-2 w-[100%] text-white">
               <div className="flex flex-col">
-                <p className="font-medium font-SagarFont text-md w-[100%]">
-                  Shree Janapriya Secondary School , Tansen palpa
-                </p>
+                <a
+                  href="https://www.facebook.com/janapriyaschoolpalpa/"
+                  target="_blank"
+                >
+                  <p className="font-medium font-SagarFont text-md w-[100%] hover:cursor-pointer hover:underline">
+                    Shree Janapriya Secondary School , Tansen palpa
+                  </p>
+                </a>
                 {/* <span className="before:block before:absolute before:-inset-0.5 before:-skew-y-3 before:bg-slate-400 relative inline-block"> */}
                 <span className="relative text-white font-SagarFont font-semibold py-2">
                   2014 - 2016
@@ -61,9 +66,14 @@ export default function () {
             </h2>
             <div className="flex flex-row gap-2 my-2 w-[100%]">
               <div className="flex flex-col">
-                <p className="font-medium font-SagarFont text-md w-[100%]">
-                  Millennium Higher Secondary School, Tansen Palpa{" "}
-                </p>
+                <a
+                  href="https://www.collegenp.com/college/millennium-secondary-school-palpa/"
+                  target="_blank"
+                >
+                  <p className="font-medium font-SagarFont text-md w-[100%] hover:cursor-pointer hover:underline">
+                    Millennium Higher Secondary School, Tansen Palpa{" "}
+                  </p>
+                </a>
                 {/* <span className="before:block before:absolute before:-inset-0.5 before:-skew-y-3 before:bg-slate-400 relative inline-block"> */}
                 <span className="relative font-SagarFont font-semibold py-2">
                   2016 - 2019
@@ -95,9 +105,11 @@ export default function () {
 
             <div className="flex flex-row gap-2 my-2 w-[100%]">
               <div className="flex flex-col">
-                <p className="font-medium font-SagarFont text-md w-[100%]">
-                  TU, IOE-Purwanchal Engineering Campus, Dharan
-                </p>
+                <a href="https://www.ioepc.edu.np/" target="_blank">
+                  <p className="font-medium font-SagarFont text-md w-[100%] hover:cursor-pointer hover:underline">
+                    TU, IOE-Purwanchal Engineering Campus, Dharan
+                  </p>
+                </a>
                 {/* <span className="before:block before:absolute before:-inset-0.5 before:-skew-y-3 before:bg-slate-400 relative inline-block"> */}
                 <span className="relative font-SagarFont font-semibold py-2">
                   2019 - 2024
