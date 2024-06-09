@@ -71,7 +71,7 @@ export default function Home() {
         </div>
 
         <img
-          className="rounded-full w-2/3 md:w-1/2 md:rounded-3xl lg:w-1/3 xl:w-1/4  mx-auto"
+          className="rounded-full w-2/3 md:w-1/2 md:rounded-3xl lg:w-1/3 xl:w-1/4  mx-auto z-[-1]"
           src={veshraj}
           alt=""
         />
